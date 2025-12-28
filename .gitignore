@@ -1,0 +1,9 @@
+
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.streamlit/
+# Ignore bulky models for standard git push (require Git LFS for 100MB+)
+models/*.pkl
+models/vectors.pkl

@@ -1,0 +1,7 @@
+I KNOW WHAT TO WATCH - Training Report
+========================================
+Decision Tree Accuracy: 1.0000
+Decision Tree F1-Score: 1.0000
+RMSE (Rating Prediction): 1.1678
+========================================
+Models saved in 'models/' directory.

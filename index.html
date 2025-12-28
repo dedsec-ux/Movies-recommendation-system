@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I KNOW WHAT TO WATCH | Movie System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="hero">
+            <h1 class="glitch" data-text="I KNOW WHAT TO WATCH">I KNOW WHAT TO WATCH</h1>
+            <p class="subtitle">Next-Gen Movie Recommendation System Powered by AI</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-wrapper">
+                <input type="text" id="movieInput" placeholder="Enter a movie name..." list="movieList">
+                <datalist id="movieList"></datalist>
+                <button id="searchBtn">Find Recommendations</button>
+            </div>
+        </section>
+
+        <section id="results" class="results-section hidden">
+            <h2 class="section-title">Model Analysis</h2>
+            <div class="analysis-grid">
+                <div class="stat-card">
+                    <span class="algo-badge">Algorithm: K-Means</span>
+                    <span class="label">Thematic Cluster</span>
+                    <h2 id="clusterVal">--</h2>
+                    <p class="algo-desc">Groups movies into 10 thematic clusters based on plot and metadata.</p>
+                    <div class="icon">🔍</div>
+                </div>
+                <div class="stat-card highlight">
+                    <span class="algo-badge">Algorithm: Decision Tree</span>
+                    <span class="label">Preference Prediction</span>
+                    <h2 id="preferenceVal">--</h2>
+                    <p class="algo-desc">Classifies if the movie fits your historical genre profile.</p>
+                    <div class="icon" id="preferenceIcon">🤖</div>
+                </div>
+                <div class="stat-card">
+                    <span class="algo-badge">Dataset Metric</span>
+                    <span class="label">Average Rating</span>
+                    <h2 id="ratingVal">--</h2>
+                    <p class="algo-desc">Standard IMDb normalized rating from TMDB dataset.</p>
+                    <div class="icon">⭐</div>
+                </div>
+            </div>
+
+            <div class="recommendations-container">
+                <div class="section-header">
+                    <span class="algo-badge large">Algorithm: K-Nearest Neighbors (KNN)</span>
+                    <div class="title-with-action">
+                        <h3>Similar Movie Recommendations</h3>
+                        <button id="refreshBtn" class="refresh-btn" title="Show different suggestions">🔄 Refresh
+                            Suggestions</button>
+                    </div>
+                    <p>Calculating cosine similarity between 5,000 movie vectors.</p>
+                </div>
+                <div id="recommendationCards" class="cards-grid">
+                    <!-- Cards injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with ❤️ using Python, Machine Learning & Vanilla JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
